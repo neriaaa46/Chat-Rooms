@@ -22,7 +22,6 @@ function verifyTokenChangePassword(req, res, next){
     }
 }
 
-
 function validationServer(objectValidation){
     return function (req, res, next){
         try{
@@ -40,7 +39,6 @@ function validationServer(objectValidation){
             if(!inValid) {
                 next()
             } else throw Error 
-
 
         } catch(error){
             res.status(400).send("אחד או יותר מהשדות אינם חוקיים")
