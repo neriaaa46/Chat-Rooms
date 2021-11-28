@@ -15,7 +15,7 @@ let morePagination = true
 
 function Room(){
 
-    const ENDPOINT = "localhost:3100"
+    const ENDPOINT = "https://chat-rooms-web.herokuapp.com"
     const messagesEndRef = useRef()
     const {id, userName} = decodeJwtToken()
     const {state} = useLocation()
@@ -145,11 +145,10 @@ function Room(){
 
     return <>
         <Container>
-            <Row className="justify-content-center mt-4">
+            <Row className="justify-content-center chat">
                 <div className="chat-header">
                     <h4 className="text-center mt-2">Chat Room</h4>
                 </div>
-
 
                 <div className="chat-body">
                     <div className="chat-side-bar">
@@ -202,7 +201,6 @@ function Room(){
                     </div>
                     
                 </div>
-
 
                 <div className="chat-footer">
                     <p>Admin : {room.admin.name}</p>

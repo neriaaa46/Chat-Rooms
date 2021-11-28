@@ -1,4 +1,5 @@
-const baseUrl = "http://localhost:3100/api"
+// const baseUrl = "http://localhost:3100/api"
+const baseUrl = "https://chat-rooms-web.herokuapp.com/api"
 
 
 async function createNewRoom(room){

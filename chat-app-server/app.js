@@ -25,7 +25,6 @@ app.use(cors({
     credentials: true
 }))
 
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -43,6 +42,7 @@ app.use('/api/rooms', roomRouter);
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'views', 'index.html'));
   })
+
 
 
 var server = require('http').Server(app);
@@ -99,6 +99,5 @@ io.on('connection', (socket) => {
         }
       })
 })
-
 
 module.exports = {app: app, server: server};

@@ -10,7 +10,7 @@ function sendEmailToConfirm({id, userName, email}){
     const html = `<div style="direction:ltr">
                   <h1>Hello ${userName} </h1>
                   <p>click on the link to confirm your email address</p>
-                  <a href = "http://localhost:3100/api/email/confirm/${token}">click here</a>
+                  <a href = "https://chat-rooms-web.herokuapp.com/api/email/confirm/${token}">click here</a>
                   </div>`
 
     const subject = "Confirm Email"
@@ -28,7 +28,7 @@ function sendEmailToResetPassword({userName, email}, resetPasswordToken){
   <h1>Hello ${userName} </h1>
   <p>You have receiving this mail beacuse you (or someone else) have requested to reset your password account.</p>
   <p>Please click on the following link, to complete the process within one hour of receiving it.</p>
-  <a href = "http://localhost:3100/resetPassword/${resetPasswordToken}"> click here.</a>
+  <a href = "https://chat-rooms-web.herokuapp.com/resetPassword/${resetPasswordToken}"> click here.</a>
   <p>If you did not request this, please ignore this email and your password will remain unchanged.</p>
   </div>`
 

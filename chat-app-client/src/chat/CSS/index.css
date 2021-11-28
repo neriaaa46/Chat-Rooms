@@ -194,6 +194,10 @@ a.nav-auth:hover{
 
 /*box chat*/
 
+.chat{
+    margin-top: 30px;
+}
+
 .chat-header{
     font-family: serif;
     color: white;
@@ -227,7 +231,7 @@ a.nav-auth:hover{
 }
 
 .chat-messages{
-    height: 360px;
+    height: 430px;
     overflow-y: scroll;
     padding: 2% 0%;
     word-break: break-all;

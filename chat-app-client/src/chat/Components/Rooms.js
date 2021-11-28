@@ -17,7 +17,7 @@ function Rooms(){
             const search = await getRooms(searchRoom)
             setRooms(search)
             stopSpinner()
-        }, 600)
+        }, 900)
 
         return () => {
             clearTimeout(timeToOpreate)
