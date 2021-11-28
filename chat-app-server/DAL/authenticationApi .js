@@ -19,7 +19,7 @@ async function register(userDetails){
     } else{
         const user = new usersModel(userDetails)
         await user.save()
-        sendEmailToConfirm(userDetails)
+        sendEmailToConfirm(user)
         return {message: "Registration succeeded"}
     }
 }
@@ -46,12 +46,11 @@ async function login({email, password}){
 }
 
 
-
 async function confirmEmail(token){
     const decodeToken = jwt.verify(token, process.env.SECRET_KEY)
     const {id} = decodeToken
     
-    const user = await usersModel.findOne({id: id})
+    const user = await usersModel.findOne({_id: id})
     user.confirmEmail = true 
     user.save()
 }
