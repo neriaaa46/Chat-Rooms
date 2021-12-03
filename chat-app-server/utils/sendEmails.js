@@ -10,7 +10,7 @@ function sendEmailToConfirm({id, userName, email}){
     const html = `<div style="direction:ltr">
                   <h1>Hello ${userName} </h1>
                   <p>click on the link to confirm your email address</p>
-                  <p>https://chat-rooms-web.herokuapp.com/api/email/confirm/${token}</p>
+                  <a href = "https://chat-rooms-web.herokuapp.com/api/email/confirm/${token}">Click here</a>
                   </div>`
 
     const subject = "Confirm Email"
