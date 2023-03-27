@@ -2,8 +2,7 @@ import { useEffect, useState } from "react"
 import { getRooms } from "../DAL/roomsApi"
 import { Container, Row, Col, Spinner } from "react-bootstrap"
 import CardRoom from "../Components/CardRoom"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+
 
 function Rooms(){
 

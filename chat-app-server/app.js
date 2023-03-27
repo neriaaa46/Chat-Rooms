@@ -39,12 +39,6 @@ app.use('/api/refreshToken', refreshTokenRouter);
 app.use('/api/rooms', roomRouter);
 
 
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'views', 'index.html'));
-  })
-
-
-
 var server = require('http').Server(app);
 
 var io = require('socket.io')(server, { cors: {
