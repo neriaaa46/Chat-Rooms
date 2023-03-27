@@ -15,7 +15,7 @@ let morePagination = true
 
 function Room(){
 
-    const ENDPOINT = "https://chat-rooms-web.herokuapp.com"
+    const ENDPOINT = "https://chat-rooms-react-app.onrender.com"
     const messagesEndRef = useRef()
     const {id, userName} = decodeJwtToken()
     const {state} = useLocation()

@@ -7,7 +7,7 @@ router.route("/confirm/:token")
 .get(async function(req, res){
     try{
        confirmEmail(req.params.token)
-       res.status(302).redirect("https://chat-rooms-web.herokuapp.com/login")
+       res.status(302).redirect("https://chat-rooms-react-app.onrender.com/login")
     }catch(error){
         res.status(400).json({error: error.message})
     }
